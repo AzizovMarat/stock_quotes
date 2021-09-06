@@ -1,7 +1,7 @@
 <H1>Stock Quotes</h1>
 <p>Тестовое задание для Alfabank</p>
 <p>
-  Приложение выполнено с использованием Spring Boot, Spring Cloud Feign, JavaFX
+  Приложение выполнено с использованием Spring Boot, Spring Cloud Feign, JavaFX.
 </p>
 <p>
   Приложение JavaFX отправляет запрос на наш микросервис, который стартует на http://localhost:8080.<br>
