@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane style="-fx-background-color: #212121;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.alfabank.stock_quotes.controller.FXController">
+   <children>
+      <VBox prefHeight="300.0" prefWidth="500.0">
+         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+            <VBox.margin>
+               <Insets />
+            </VBox.margin>
+            <ImageView fx:id="alfaImage" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../img/alfa-image.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="150.0" prefWidth="217.0" text="Alfabank&#10;&#10;Тестовое задание&#10;Курсы валют" textAlignment="CENTER">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="0.7666666666666667" endY="0.6714285714285715" startX="0.1238095238095238" startY="0.6047619047619047">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.8684210777282715" green="0.048245612531900406" blue="0.048245612531900406" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.007662835249042145">
+                           <color>
+                              <Color red="0.8684210777282715" green="0.048245612531900406" blue="0.048245612531900406" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.3856907784938812" green="0.8289473652839661" blue="0.0690789446234703" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill></Label>
+            <padding>
+               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+         </HBox>
+         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+            <children>
+               <Button fx:id="getAllTickers" mnemonicParsing="false" onAction="#getAllTickers" prefWidth="105.0" text="Get all tickers">
+                  <HBox.margin>
+                     <Insets right="10.0" />
+                  </HBox.margin></Button>
+               <Label fx:id="infoLbl" prefWidth="355.0" text="Всего загружено 0 тикетов" textFill="#61c27d" visible="false">
+                  <HBox.margin>
+                     <Insets left="10.0" />
+                  </HBox.margin>
+                  <font>
+                     <Font size="14.0" />
+                  </font>
+               </Label>
+            </children>
+            <padding>
+               <Insets left="10.0" right="10.0" />
+            </padding>
+         </HBox>
+         <HBox fx:id="ratesHBox1" visible="false">
+            <children>
+               <VBox>
+                  <children>
+                     <Label prefWidth="105.0" text="Выберите тикер" textFill="#61c27d">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Label>
+                     <ComboBox fx:id="secondTicker" onAction="#selectSecondTicker" prefWidth="105.0" />
+                  </children>
+                  <padding>
+                     <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                  </padding>
+               </VBox>
+               <VBox>
+                  <children>
+                     <Label prefWidth="225.0" text="Полное название тикера" textFill="#61c27d">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Label>
+                     <TextField fx:id="fullNameOfFirstTicker" editable="false" prefWidth="355.0" />
+                  </children>
+                  <padding>
+                     <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                  </padding>
+               </VBox>
+            </children>
+         </HBox>
+         <HBox fx:id="calendarHBox" layoutX="10.0" layoutY="270.0" visible="false">
+            <children>
+               <VBox>
+                  <padding>
+                     <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                  </padding>
+                  <children>
+                     <DatePicker fx:id="datePicker" onAction="#selectDate" prefWidth="105.0" />
+                  </children>
+               </VBox>
+               <VBox alignment="CENTER_LEFT">
+                  <children>
+                     <Label fx:id="dateLbl" prefWidth="355.0" textFill="#61c27d" />
+                  </children>
+                  <padding>
+                     <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                  </padding>
+               </VBox>
+            </children>
+         </HBox>
+         <HBox fx:id="rateHBox" visible="false">
+            <children>
+               <VBox>
+                  <children>
+                     <Button fx:id="getRate" mnemonicParsing="false" onAction="#getRate" prefWidth="105.0" text="Get rate">
+                        <opaqueInsets>
+                           <Insets />
+                        </opaqueInsets>
+                     </Button>
+                  </children>
+                  <padding>
+                     <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                  </padding>
+               </VBox>
+               <VBox alignment="CENTER_LEFT">
+                  <children>
+                     <Label fx:id="stocks" prefWidth="355.0" textFill="#61c27d" />
+                  </children>
+                  <padding>
+                     <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                  </padding>
+               </VBox>
+            </children>
+         </HBox>
+      </VBox>
+   </children>
+</AnchorPane>

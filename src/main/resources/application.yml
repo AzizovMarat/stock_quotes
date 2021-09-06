@@ -1,0 +1,10 @@
+openexchangerates:
+  url: https://openexchangerates.org/api/
+  appID: 4878802b26044e399aed2e824cf64bd2
+  latest: latest.json?app_id=%s
+  historical: historical/%04d-%02d-%02d.json?app_id=%s
+  currencies: currencies.json
+  time-series: time-series.json
+  convert: convert
+  ohlc: ohlc.json
+  usage: usage.json?app_id=%s
