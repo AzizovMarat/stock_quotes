@@ -1,4 +1,3 @@
-# stock_quotes
 <H1>Stock Quotes</h1>
 <p>Тестовое задание для Alfabank</p>
 <p>
